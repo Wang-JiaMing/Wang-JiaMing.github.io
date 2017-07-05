@@ -21,6 +21,18 @@ categories: hexo
 > ```base
 > haxe g
 > ```
+> 快速部署
+> ```base
+> haxe d
+> ```
+> 改名了需要在站点配置文件(_config.yml)中修改以下内容
+>> deploy:
+  type: git
+  repo: https://github.com/________/________.github.io.git
+  branch: master
+
+  对于报ERROR Deployer not found: git 的安装一下工具即可
+  npm install hexo-deployer-git --save
 
 ### git
 > 添加到缓冲区
