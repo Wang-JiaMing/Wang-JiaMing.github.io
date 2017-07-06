@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[hexo搭建博客(4)——跨电脑写博客策略]]></title>
+    <url>%2F2017%2F07%2F04%2Fhexo-4%2F</url>
+    <content type="text"><![CDATA[很多人搭建了hexo后发现，换了电脑根本没环境再写博客，难道要重搭环境？其实不，在hexo中其实有一个.gitignore文件，从文件夹就可以明白源文件应该也要给放到github上。当然，这是其中一个途径，其他途径等着读者发现了。(例如云盘备份、u盘备份等) 创建多分支个人感觉git的精髓除了分布式版本管理之外，就是分支的概念了。我们可以在静态网站的远程仓库上分别建两个分子，master分支是必须的，我们用master分支来存储hexo生成出来的静态文件。之后再创建一个hexo(名字你们可以自己另起)分支，用来存放hexo init 的源码。这样我们一个仓库就能通过切换不同分支来完成博客的生成和发布了。 ps:注意由于下载下来的主题含有.git文件夹，固需要删除后再传到远程仓库中 相关命令 仓库分支并切换分支git checkout -b hexo 1.1 clone后检出远程分支 git checkout -b hexo origin/hexo 推送分支到远程仓库git push origin hexo 安装hexo(主要,机器必须有node.js环境)npm install hexo-cli -g 保存安装设置npm install –save]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo搭建博客(3)——常用命令]]></title>
+    <url>%2F2017%2F07%2F03%2Fhexo-3%2F</url>
+    <content type="text"><![CDATA[以下高频命令，总结一下 hexo 初始化博客12&gt; haxe init _name_&gt; 清空博客缓存12&gt; haxe clean&gt; 生成博客静态文件12&gt; haxe g&gt; 快速部署12&gt; haxe d&gt; 改名了需要在站点配置文件(_config.yml)中修改以下内容 deploy: type: git repo: https://github.com/________/________.github.io.git branch: master 对于报ERROR Deployer not found: git 的安装一下工具即可 npm install hexo-deployer-git –save git 添加到缓冲区12&gt; git add *&gt; 提交12&gt; git commit -m &apos;______&apos;&gt; 推送到远程仓库12&gt; git push&gt;]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo搭建博客(2)——github搭建]]></title>
+    <url>%2F2017%2F07%2F03%2Fhexo-2%2F</url>
+    <content type="text"><![CDATA[只有localhost看到我们得个人网站当然不是写博客的初衷，想在公网上看到我们生成的博客，首先我们我们的有一个github账号，和本地能运行git的环境。 注册github账号这部直接跳过了，注册github流程可以自行百度。 创建一个仓库该仓库的名字以自己github名字开头即可由于我已有该仓库，所以提示已存在了。 clone仓库到本地把刚刚仓库的仓库clone到本地1git clone _gitUrl_ 生成博客静态文件回到刚刚初始化博客的目录，输入以下命令生成静态网站1hexo g 当命令跑完后，目录下会多出public文件夹，把该文件夹下所有文件复制到刚刚clone下来的本地仓库中，再提交到远程仓库中即可。公网访问路径http://_yourName_.github.io，这时候你可以把网址分享给你的小伙伴看看了。(´▽`)]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo搭建博客(1)]]></title>
+    <url>%2F2017%2F07%2F03%2Fhexo-1%2F</url>
+    <content type="text"><![CDATA[博主一直想搭建一个博客，无奈博客园、csdn等博客都太大众化了，出于本人是程序员的身份，所以尝试使用Hexo来搭建博客，本文不会深入解析hexo语法和git语法，需要深入研究的话请自行百度。 前言(-_-好像太正式了)需要搭建hexo博客必须会使用git、和拥有github账号以及node.js环境。 1.安装node.js由于工作环境问题，暂时提供windows的安装说明。其实也不是什么说明，就一直点下一步。。。附上node.js官网地址,自行click进去download安装吧。 2.安装Git本人的git已经安装多时了，具体安装过程需要注意啥都忘记了，安装过程遇到问题自行百度吧。附上git官方地址。 3.使用node.js的npm包管理工具安装hexo step.1 1$ npm install hexo-cli -g 由于服务器在外国，可能会出现失败，可以使用淘宝镜像。 step.2 1$ npm install --save step.3 1$ hexo init test test是自定义文件名，由于初始化时候需要从github download landscpae默认主题，所以请保持网络畅通 hexo博客目录结构说明1._config.yml ——是博客主要配置文件,也叫站点配置文件2.db.json——是博客数据库3.node_modules——是NodeJS依赖模块4.source——是博客内容以及其他页面（page）存在的目录，这个目录里面有个_post目录就是我们存放博客内容的地方，也就是存放博客内容markdown文档地方，输入hexo new “newPage”就会在这个目录建立一个名为newPage的子目录，然后在里面放入md文档，并在主题的配置文件里面添加相应栏目newPage，这样就会显示在主页面的目录上。5.themes——是主题存放文件 step.4 进入 test 目录输入以下命令，启动本地博客服务器,默认访问localhost:40001$ hexo s 或 $ hexo server 如果看到以下界面，恭喜你，hello world级别的博客搭建成功了]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>hexo</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+</search>
