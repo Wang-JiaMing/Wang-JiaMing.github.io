@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo博客搭建(5)——github绑定域名]]></title>
+    <url>%2F2017%2F07%2F06%2Fhexo-internet%2F</url>
+    <content type="text"><![CDATA[1. 购买阿里云的域名首先需要注册个账号去阿里云购买域名，最近好像有搞活动，反正我新用户买.top首年一块钱哈。买了也不亏。 2.解析买了域名后开始在控制台配置dns解析进入界面点解解析添加解析 1.记录类型不变2.主机记录填刚刚购买的域名3.解析线路不变4.记录值填xxxxx.github.io的ip【ps:可以用ping xxxxx.github.io查看ip】5.剩余基本不变，点保存吧 这时候可能有点延时，过一阵子再打开你的域名吧！ 几分钟过后… 什么？404？哈哈，这就对了！ 3.CNAME文件到最后一步了，在HEXO生成的public文件夹里放入CNAME文件，注意，不需要任何扩展名！里面内容就一行，就是你的域名。这时候重新部署你的博客用域名进入试一试？ PS：CNAME放在Source文件夹下，这样每次hexo d就不用重新放到public了]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>阿里云</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo搭建博客(4)——跨电脑写博客策略]]></title>
     <url>%2F2017%2F07%2F04%2Fhexo-4%2F</url>
     <content type="text"><![CDATA[很多人搭建了hexo后发现，换了电脑根本没环境再写博客，难道要重搭环境？其实不，在hexo中其实有一个.gitignore文件，从文件夹就可以明白源文件应该也要给放到github上。当然，这是其中一个途径，其他途径等着读者发现了。(例如云盘备份、u盘备份等) 创建多分支个人感觉git的精髓除了分布式版本管理之外，就是分支的概念了。我们可以在静态网站的远程仓库上分别建两个分子，master分支是必须的，我们用master分支来存储hexo生成出来的静态文件。之后再创建一个hexo(名字你们可以自己另起)分支，用来存放hexo init 的源码。这样我们一个仓库就能通过切换不同分支来完成博客的生成和发布了。 ps:注意由于下载下来的主题含有.git文件夹，固需要删除后再传到远程仓库中 相关命令 仓库分支并切换分支git checkout -b hexo 1.1 clone后检出远程分支 git checkout -b hexo origin/hexo 推送分支到远程仓库git push origin hexo 安装hexo(主要,机器必须有node.js环境)npm install hexo-cli -g 保存安装设置npm install –save]]></content>
@@ -42,8 +54,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>git</tag>
         <tag>hexo</tag>
+        <tag>git</tag>
         <tag>node.js</tag>
       </tags>
   </entry>
