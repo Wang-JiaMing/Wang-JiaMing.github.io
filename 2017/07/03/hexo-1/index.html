@@ -100,13 +100,14 @@
 <meta property="og:url" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/index.html">
 <meta property="og:site_name" content="Wang.JiaMing Blog">
 <meta property="og:description" content="博主一直想搭建一个博客，无奈博客园、csdn等博客都太大众化了，出于本人是程序员的身份，所以尝试使用Hexo来搭建博客，本文不会深入解析hexo语法和git语法，需要深入研究的话请自行百度。">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/1.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/2.png">
-<meta property="og:updated_time" content="2017-07-06T06:21:13.223Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/hexo-1/1.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/hexo-1/2.png">
+<meta property="og:updated_time" content="2017-12-11T07:01:45.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建博客(1)">
 <meta name="twitter:description" content="博主一直想搭建一个博客，无奈博客园、csdn等博客都太大众化了，出于本人是程序员的身份，所以尝试使用Hexo来搭建博客，本文不会深入解析hexo语法和git语法，需要深入研究的话请自行百度。">
-<meta name="twitter:image" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/1.png">
+<meta name="twitter:image" content="https://wang-jiaming.github.io/2017/07/03/hexo-1/hexo-1/1.png">
 
 
 
@@ -437,18 +438,18 @@
 </blockquote>
 <a id="more"></a>
 <h3 id="前言-好像太正式了"><a href="#前言-好像太正式了" class="headerlink" title="前言(-_-好像太正式了)"></a>前言(-_-好像太正式了)</h3><p>需要搭建hexo博客必须会使用git、和拥有github账号以及node.js环境。</p>
-<h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h3><p>由于工作环境问题，暂时提供windows的安装说明。其实也不是什么说明，就一直点下一步。。。<br>附上<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a>官网地址,自行click进去download安装吧。</p>
-<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><p>本人的git已经安装多时了，具体安装过程需要注意啥都忘记了，安装过程遇到问题自行百度吧。<br>附上<a href="https://git-scm.com/" target="_blank" rel="external">git</a>官方地址。</p>
+<h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h3><p>由于工作环境问题，暂时提供windows的安装说明。其实也不是什么说明，就一直点下一步。。。<br>附上<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a>官网地址,自行click进去download安装吧。</p>
+<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><p>本人的git已经安装多时了，具体安装过程需要注意啥都忘记了，安装过程遇到问题自行百度吧。<br>附上<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>官方地址。</p>
 <h3 id="3-使用node-js的npm包管理工具安装hexo"><a href="#3-使用node-js的npm包管理工具安装hexo" class="headerlink" title="3.使用node.js的npm包管理工具安装hexo"></a>3.使用node.js的npm包管理工具安装hexo</h3><p><strong> step.1 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
 <p>由于服务器在外国，可能会出现失败，可以使用淘宝镜像。</p>
 <p><strong> step.2 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save</div></pre></td></tr></table></figure></p>
 <p><strong> step.3 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init <span class="built_in">test</span></div></pre></td></tr></table></figure></p>
 <p>test是自定义文件名，由于初始化时候需要从github download landscpae默认主题，所以请保持网络畅通</p>
 <blockquote>
-<p>hexo博客目录结构说明<br><img src="/2017/07/03/hexo-1/1.png" alt=""><br>1._config.yml ——是博客主要配置文件,也叫站点配置文件<br>2.db.json——是博客数据库<br>3.node_modules——是NodeJS依赖模块<br>4.source——是博客内容以及其他页面（page）存在的目录，这个目录里面有个_post目录就是我们存放博客内容的地方，也就是存放博客内容markdown文档地方，输入hexo new “newPage”就会在这个目录建立一个名为newPage的子目录，然后在里面放入md文档，并在主题的配置文件里面添加相应栏目newPage，这样就会显示在主页面的目录上。<br>5.themes——是主题存放文件</p>
+<p>hexo博客目录结构说明<br><img src="hexo-1/1.png" alt=""><br>1._config.yml ——是博客主要配置文件,也叫站点配置文件<br>2.db.json——是博客数据库<br>3.node_modules——是NodeJS依赖模块<br>4.source——是博客内容以及其他页面（page）存在的目录，这个目录里面有个_post目录就是我们存放博客内容的地方，也就是存放博客内容markdown文档地方，输入hexo new “newPage”就会在这个目录建立一个名为newPage的子目录，然后在里面放入md文档，并在主题的配置文件里面添加相应栏目newPage，这样就会显示在主页面的目录上。<br>5.themes——是主题存放文件</p>
 </blockquote>
 <p><strong> step.4 </strong><br>进入 test 目录输入以下命令，启动本地博客服务器,默认访问localhost:4000<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s 或 $ hexo server</div></pre></td></tr></table></figure></p>
-<p>如果看到以下界面，恭喜你，hello world级别的博客搭建成功了<br><img src="/2017/07/03/hexo-1/2.png" alt=""></p>
+<p>如果看到以下界面，恭喜你，hello world级别的博客搭建成功了<br><img src="hexo-1/2.png" alt=""></p>
 
       
     </div>
@@ -575,7 +576,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -674,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言-好像太正式了"><span class="nav-number">1.</span> <span class="nav-text">前言(-_-好像太正式了)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装node-js"><span class="nav-number">2.</span> <span class="nav-text">1.安装node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Git"><span class="nav-number">3.</span> <span class="nav-text">2.安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用node-js的npm包管理工具安装hexo"><span class="nav-number">4.</span> <span class="nav-text">3.使用node.js的npm包管理工具安装hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言-好像太正式了"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x524D;&#x8A00;-&#x597D;&#x50CF;&#x592A;&#x6B63;&#x5F0F;&#x4E86;" class="headerlink" title="&#x524D;&#x8A00;(-_-&#x597D;&#x50CF;&#x592A;&#x6B63;&#x5F0F;&#x4E86;)"></a>&#x524D;&#x8A00;(-_-&#x597D;&#x50CF;&#x592A;&#x6B63;&#x5F0F;&#x4E86;)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装node-js"><span class="nav-number">2.</span> <span class="nav-text"><a href="#1-&#x5B89;&#x88C5;node-js" class="headerlink" title="1.&#x5B89;&#x88C5;node.js"></a>1.&#x5B89;&#x88C5;node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Git"><span class="nav-number">3.</span> <span class="nav-text"><a href="#2-&#x5B89;&#x88C5;Git" class="headerlink" title="2.&#x5B89;&#x88C5;Git"></a>2.&#x5B89;&#x88C5;Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用node-js的npm包管理工具安装hexo"><span class="nav-number">4.</span> <span class="nav-text"><a href="#3-&#x4F7F;&#x7528;node-js&#x7684;npm&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;hexo" class="headerlink" title="3.&#x4F7F;&#x7528;node.js&#x7684;npm&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;hexo"></a>3.&#x4F7F;&#x7528;node.js&#x7684;npm&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;hexo</span></a></li></ol></div>
             
 
           </div>

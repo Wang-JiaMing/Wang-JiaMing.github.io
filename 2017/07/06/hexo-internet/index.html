@@ -100,17 +100,18 @@
 <meta property="og:url" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/index.html">
 <meta property="og:site_name" content="Wang.JiaMing Blog">
 <meta property="og:description" content="1. 购买阿里云的域名首先需要注册个账号去阿里云购买域名，最近好像有搞活动，反正我新用户买.top首年一块钱哈。买了也不亏。">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/1.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/2.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/3.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/4.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/5.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/6.png">
-<meta property="og:updated_time" content="2017-07-06T07:28:01.067Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/1.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/2.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/3.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/4.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/5.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/6.png">
+<meta property="og:updated_time" content="2017-12-11T07:01:45.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客搭建(5)——github绑定域名">
 <meta name="twitter:description" content="1. 购买阿里云的域名首先需要注册个账号去阿里云购买域名，最近好像有搞活动，反正我新用户买.top首年一块钱哈。买了也不亏。">
-<meta name="twitter:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/1.png">
+<meta name="twitter:image" content="https://wang-jiaming.github.io/2017/07/06/hexo-internet/hexo-internet/1.png">
 
 
 
@@ -438,14 +439,14 @@
       
         <h2 id="1-购买阿里云的域名"><a href="#1-购买阿里云的域名" class="headerlink" title="1. 购买阿里云的域名"></a>1. 购买阿里云的域名</h2><p>首先需要注册个账号去阿里云购买域名，最近好像有搞活动，反正我新用户买.top首年一块钱哈。买了也不亏。</p>
 <a id="more"></a>
-<h2 id="2-解析"><a href="#2-解析" class="headerlink" title="2.解析"></a>2.解析</h2><p>买了域名后开始在控制台配置dns解析<br><img src="/2017/07/06/hexo-internet/1.png" alt=""><br>进入界面点解解析<br><img src="/2017/07/06/hexo-internet/2.png" alt=""><br>添加解析<br><img src="/2017/07/06/hexo-internet/3.png" alt=""><br><img src="/2017/07/06/hexo-internet/4.png" alt=""></p>
+<h2 id="2-解析"><a href="#2-解析" class="headerlink" title="2.解析"></a>2.解析</h2><p>买了域名后开始在控制台配置dns解析<br><img src="hexo-internet/1.png" alt=""><br>进入界面点解解析<br><img src="hexo-internet/2.png" alt=""><br>添加解析<br><img src="hexo-internet/3.png" alt=""><br><img src="hexo-internet/4.png" alt=""></p>
 <blockquote>
 <p>1.记录类型不变<br>2.主机记录填刚刚购买的域名<br>3.解析线路不变<br>4.记录值填xxxxx.github.io的ip【ps:可以用ping xxxxx.github.io查看ip】<br>5.剩余基本不变，点保存吧</p>
 </blockquote>
 <p>这时候可能有点延时，过一阵子再打开你的域名吧！</p>
 <p>几分钟过后…</p>
 <p>什么？404？哈哈，这就对了！</p>
-<h2 id="3-CNAME文件"><a href="#3-CNAME文件" class="headerlink" title="3.CNAME文件"></a>3.CNAME文件</h2><p>到最后一步了，在HEXO生成的public文件夹里放入CNAME文件，注意，不需要任何扩展名！<br>里面内容就一行，就是你的域名。这时候重新部署你的博客用域名进入试一试？<br><img src="/2017/07/06/hexo-internet/5.png" alt=""><br><img src="/2017/07/06/hexo-internet/6.png" alt=""></p>
+<h2 id="3-CNAME文件"><a href="#3-CNAME文件" class="headerlink" title="3.CNAME文件"></a>3.CNAME文件</h2><p>到最后一步了，在HEXO生成的public文件夹里放入CNAME文件，注意，不需要任何扩展名！<br>里面内容就一行，就是你的域名。这时候重新部署你的博客用域名进入试一试？<br><img src="hexo-internet/5.png" alt=""><br><img src="hexo-internet/6.png" alt=""></p>
 <p>PS：CNAME放在Source文件夹下，这样每次hexo d就不用重新放到public了</p>
 
       
@@ -500,6 +501,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/11/test/" rel="prev" title="测试">
+                测试 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -571,7 +576,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -670,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-购买阿里云的域名"><span class="nav-number">1.</span> <span class="nav-text">1. 购买阿里云的域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-解析"><span class="nav-number">2.</span> <span class="nav-text">2.解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CNAME文件"><span class="nav-number">3.</span> <span class="nav-text">3.CNAME文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-购买阿里云的域名"><span class="nav-number">1.</span> <span class="nav-text"><a href="#1-&#x8D2D;&#x4E70;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x57DF;&#x540D;" class="headerlink" title="1. &#x8D2D;&#x4E70;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x57DF;&#x540D;"></a>1. &#x8D2D;&#x4E70;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x57DF;&#x540D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-解析"><span class="nav-number">2.</span> <span class="nav-text"><a href="#2-&#x89E3;&#x6790;" class="headerlink" title="2.&#x89E3;&#x6790;"></a>2.&#x89E3;&#x6790;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CNAME文件"><span class="nav-number">3.</span> <span class="nav-text"><a href="#3-CNAME&#x6587;&#x4EF6;" class="headerlink" title="3.CNAME&#x6587;&#x4EF6;"></a>3.CNAME&#x6587;&#x4EF6;</span></a></li></ol></div>
             
 
           </div>
