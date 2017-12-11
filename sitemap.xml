@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wang-jiaming.github.io/tags/index.html</loc>
+    <loc>https://wang-jiaming.github.io/2017/12/11/hexo-5/</loc>
     
-    <lastmod>2017-12-11T07:13:49.095Z</lastmod>
+    <lastmod>2017-12-11T08:03:45.133Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wang-jiaming.github.io/categories/index.html</loc>
+    <loc>https://wang-jiaming.github.io/tags/index.html</loc>
     
-    <lastmod>2017-12-11T07:13:49.094Z</lastmod>
+    <lastmod>2017-12-11T07:13:49.095Z</lastmod>
     
   </url>
   
@@ -23,9 +23,9 @@
   </url>
   
   <url>
-    <loc>https://wang-jiaming.github.io/2017/07/04/hexo-4/</loc>
+    <loc>https://wang-jiaming.github.io/categories/index.html</loc>
     
-    <lastmod>2017-12-11T07:13:49.092Z</lastmod>
+    <lastmod>2017-12-11T07:13:49.094Z</lastmod>
     
   </url>
   
@@ -38,6 +38,13 @@
   
   <url>
     <loc>https://wang-jiaming.github.io/2017/07/06/hexo-internet/</loc>
+    
+    <lastmod>2017-12-11T07:13:49.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wang-jiaming.github.io/2017/07/04/hexo-4/</loc>
     
     <lastmod>2017-12-11T07:13:49.092Z</lastmod>
     

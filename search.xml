@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo填坑记]]></title>
+    <url>%2F2017%2F12%2F11%2Fhexo-5%2F</url>
+    <content type="text"><![CDATA[由于同事的支持，本来搁置的博客又拿出来继续写了，现在充满了鸡血，希望不会第二次搁置 一、今天把搁置多时的博客clone下来打算继续写。。。不过发现，我压根忘记当时所有的操作和部署的原则，因此在这里记录一下我填坑记录。 其实在几个月我刚刚开始搞hexo的时候就为自己设置了一套快速异地（别的电脑）发布网站的策略。应该写了一篇跨电脑发布文章的博文，大家可以看看╮(￣▽￣)╭。有时候真的为过去的自己点赞。我当时跨电脑写论文的策略是在工程下建立hexo分支，通过hexo g和hexo d快速把工程push到master分支上 这里补充一下，我们的博客外网访问的网站读取都是master上的静态html，所以hexo的源码部分不能放到master上。几个月前我就把源码放到同一个工程的hexo分支上了 所以现在过了几个月，我只要把hexo分支clone下来，之后通过hexo new xxx新建文章，M再通过hexo g和hexo d就自动分布到master上了！我去，我真聪明。 二、由于换电脑了，需要重新搭建hexo环境，而且过去我写的博客都是简单几个命令(￣.￣)，这里重新记录一下，由于我是从windows转成macos的，所以一下命令就用unix/linux的了。安装node.js1brew install node 安装hexo1npm install -g hexo-cli 就这样简单的几个命令就可以把我之前的博客快速进入编写状态，不用从头开始弄]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo博客搭建(5)——github绑定域名]]></title>
     <url>%2F2017%2F07%2F06%2Fhexo-internet%2F</url>
     <content type="text"><![CDATA[1. 购买阿里云的域名首先需要注册个账号去阿里云购买域名，最近好像有搞活动，反正我新用户买.top首年一块钱哈。买了也不亏。 2.解析买了域名后开始在控制台配置dns解析进入界面点解解析添加解析 1.记录类型不变2.主机记录填刚刚购买的域名3.解析线路不变4.记录值填xxxxx.github.io的ip【ps:可以用ping xxxxx.github.io查看ip】5.剩余基本不变，点保存吧 这时候可能有点延时，过一阵子再打开你的域名吧！ 几分钟过后… 什么？404？哈哈，这就对了！ 3.CNAME文件到最后一步了，在HEXO生成的public文件夹里放入CNAME文件，注意，不需要任何扩展名！里面内容就一行，就是你的域名。这时候重新部署你的博客用域名进入试一试？ PS：CNAME放在Source文件夹下，这样每次hexo d就不用重新放到public了]]></content>
