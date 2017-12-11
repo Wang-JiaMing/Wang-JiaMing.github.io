@@ -37,7 +37,7 @@
   <entry>
     <title><![CDATA[hexo搭建博客(3)——常用命令]]></title>
     <url>%2F2017%2F07%2F03%2Fhexo-3%2F</url>
-    <content type="text"><![CDATA[以下高频命令，总结一下 hexo 初始化博客12&gt; haxe init _name_&gt; 清空博客缓存12&gt; haxe clean&gt; 生成博客静态文件12&gt; haxe g&gt; 快速部署12&gt; haxe d&gt; 改名了需要在站点配置文件(_config.yml)中修改以下内容 deploy: type: git repo: https://github.com/________/________.github.io.git branch: master 对于报ERROR Deployer not found: git 的安装一下工具即可 npm install hexo-deployer-git –save git 添加到缓冲区12&gt; git add *&gt; 提交12&gt; git commit -m &apos;______&apos;&gt; 推送到远程仓库12&gt; git push&gt;]]></content>
+    <content type="text"><![CDATA[以下高频命令，总结一下 hexo 初始化博客12&gt; haxo init _name_&gt; 清空博客缓存12&gt; haxo clean&gt; 生成博客静态文件12&gt; haxo g&gt; 快速部署12&gt; haxo d&gt; 改名了需要在站点配置文件(_config.yml)中修改以下内容 deploy: type: git repo: https://github.com/________/________.github.io.git branch: master repo建议使用ssh而非https，原因由于https每次hexo d都要填写账号密码 对于报ERROR Deployer not found: git 的安装一下工具即可 npm install hexo-deployer-git –save git 添加到缓冲区12&gt; git add *&gt; 提交12&gt; git commit -m &apos;______&apos;&gt; 推送到远程仓库12&gt; git push&gt;]]></content>
       <categories>
         <category>hexo</category>
       </categories>
