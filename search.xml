@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[针对null值使用函数索引的方法]]></title>
+    <url>%2F2017%2F12%2F11%2Ffunction-index%2F</url>
+    <content type="text"><![CDATA[最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null 由于表巨大（千万级），所以不走索引下sql即使能跑出了，也十分缓慢，况且也不走索引未必能在海量数据中找出结果来。所以我们需要把null去掉。 而在表中update无疑是等下全表扫描一次，而且在海量数据中update，锁表时间不知道需要多长时间。所以我选择了函数索引。 下图是测试表的数据量，可以看到已经达到2千万+的数据量了接着我们对排除null或者需要引用null的字典建立一个函数索引就这样以后我们用上xxx is null或者xxx is not null 也能跑索引了，千万级数据秒出不是梦]]></content>
+      <categories>
+        <category>oracle</category>
+      </categories>
+      <tags>
+        <tag>oracle</tag>
+        <tag>索引</tag>
+        <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo填坑记]]></title>
     <url>%2F2017%2F12%2F11%2Fhexo-5%2F</url>
     <content type="text"><![CDATA[由于同事的支持，本来搁置的博客又拿出来继续写了，现在充满了鸡血，希望不会第二次搁置 一、今天把搁置多时的博客clone下来打算继续写。。。不过发现，我压根忘记当时所有的操作和部署的原则，因此在这里记录一下我填坑记录。 其实在几个月我刚刚开始搞hexo的时候就为自己设置了一套快速异地（别的电脑）发布网站的策略。应该写了一篇跨电脑发布文章的博文，大家可以看看╮(￣▽￣)╭。有时候真的为过去的自己点赞。我当时跨电脑写论文的策略是在工程下建立hexo分支，通过hexo g和hexo d快速把工程push到master分支上 这里补充一下，我们的博客外网访问的网站读取都是master上的静态html，所以hexo的源码部分不能放到master上。几个月前我就把源码放到同一个工程的hexo分支上了 所以现在过了几个月，我只要把hexo分支clone下来，之后通过hexo new xxx新建文章，M再通过hexo g和hexo d就自动分布到master上了！我去，我真聪明。 二、由于换电脑了，需要重新搭建hexo环境，而且过去我写的博客都是简单几个命令(￣.￣)，这里重新记录一下，由于我是从windows转成macos的，所以一下命令就用unix/linux的了。安装node.js1brew install node 安装hexo1npm install -g hexo-cli 就这样简单的几个命令就可以把我之前的博客快速进入编写状态，不用从头开始弄]]></content>
