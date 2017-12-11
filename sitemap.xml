@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wang-jiaming.github.io/2017/07/06/hexo-internet/</loc>
+    
+    <lastmod>2017-12-11T09:36:29.400Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wang-jiaming.github.io/2017/07/03/hexo-2/</loc>
+    
+    <lastmod>2017-12-11T09:35:20.726Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wang-jiaming.github.io/2017/07/03/hexo-1/</loc>
+    
+    <lastmod>2017-12-11T09:35:06.414Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wang-jiaming.github.io/2017/12/11/function-index/</loc>
     
-    <lastmod>2017-12-11T09:29:25.413Z</lastmod>
+    <lastmod>2017-12-11T09:33:44.859Z</lastmod>
     
   </url>
   
@@ -47,27 +68,6 @@
     <loc>https://wang-jiaming.github.io/2017/07/04/hexo-4/</loc>
     
     <lastmod>2017-12-11T07:13:49.092Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wang-jiaming.github.io/2017/07/06/hexo-internet/</loc>
-    
-    <lastmod>2017-12-11T07:13:49.092Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wang-jiaming.github.io/2017/07/03/hexo-2/</loc>
-    
-    <lastmod>2017-12-11T07:13:49.091Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wang-jiaming.github.io/2017/07/03/hexo-1/</loc>
-    
-    <lastmod>2017-12-11T07:13:49.089Z</lastmod>
     
   </url>
   

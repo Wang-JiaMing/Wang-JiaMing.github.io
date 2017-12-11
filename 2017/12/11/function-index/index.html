@@ -93,22 +93,22 @@
 
 
 
-<meta name="description" content="最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null">
+<meta name="description" content="最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null不走索引的情况了。">
 <meta name="keywords" content="oracle,索引,函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="针对null值使用函数索引的方法">
 <meta property="og:url" content="https://wang-jiaming.github.io/2017/12/11/function-index/index.html">
 <meta property="og:site_name" content="Wang.JiaMing Blog">
-<meta property="og:description" content="最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null">
+<meta property="og:description" content="最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null不走索引的情况了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/function-index/1.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/function-index/2.png">
-<meta property="og:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/function-index/3.png">
-<meta property="og:updated_time" content="2017-12-11T09:29:25.413Z">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/1.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/2.png">
+<meta property="og:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/3.png">
+<meta property="og:updated_time" content="2017-12-11T09:33:44.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="针对null值使用函数索引的方法">
-<meta name="twitter:description" content="最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null">
-<meta name="twitter:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/function-index/1.png">
+<meta name="twitter:description" content="最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null不走索引的情况了。">
+<meta name="twitter:image" content="https://wang-jiaming.github.io/2017/12/11/function-index/1.png">
 
 
 
@@ -435,12 +435,12 @@
 
       
         <blockquote>
-<p>最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null</p>
+<p>最近由于工作需要把大量数据进行整合，而在包含有null值的table列上建立索引，在查询时用到该索引条件是不走索引的。经过百度优化，使用函数索引即可排除null不走索引的情况了。</p>
 </blockquote>
 <a id="more"></a>
 <p>由于表巨大（千万级），所以不走索引下sql即使能跑出了，也十分缓慢，况且也不走索引未必能在海量数据中找出结果来。所以我们需要把null去掉。</p>
 <p>而在表中update无疑是等下全表扫描一次，而且在海量数据中update，锁表时间不知道需要多长时间。所以我选择了函数索引。</p>
-<p>下图是测试表的数据量，可以看到已经达到2千万+的数据量了<br><br><img src="function-index/1.png" alt=""><br><br><br>接着我们对排除null或者需要引用null的字典建立一个函数索引<br><br><img src="function-index/2.png" alt=""><br><br><br>就这样以后我们用上xxx is null或者xxx is not null 也能跑索引了，千万级数据秒出不是梦<br><img src="function-index/3.png" alt=""></p>
+<p>下图是测试表的数据量，可以看到已经达到2千万+的数据量了<br><br><img src="1.png" alt=""><br><br><br>接着我们对排除null或者需要引用null的字典建立一个函数索引<br><br><img src="2.png" alt=""><br><br><br>就这样以后我们用上xxx is null或者xxx is not null 也能跑索引了，千万级数据秒出不是梦<br><img src="3.png" alt=""></p>
 
       
     </div>
